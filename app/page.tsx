@@ -1,4 +1,4 @@
-const LIEN_PAIEMENT = "#offre";
+const LIEN_PAIEMENT = "https://buy.stripe.com/test_4gMcMYgT48k7bwqbKc3ks00";
 const titre = "font-[family-name:var(--font-fraunces)]";
 
 function Bouton({ children }: { children: React.ReactNode }) {
