@@ -90,7 +90,17 @@ export default function CGV() {
       <p className="mt-2">
         En cas de litige, le client peut, après une réclamation écrite restée sans
         réponse satisfaisante, recourir gratuitement au médiateur de la
-        consommation : [À COMPLÉTER : nom et coordonnées du médiateur].
+        consommation : le Centre de la Médiation de la Consommation de
+        Conciliateurs de Justice (CM2C), 49 rue de Ponthieu, 75008 Paris —{" "}
+        <a
+          href="https://www.cm2c.net"
+          className="underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          www.cm2c.net
+        </a>
+        .
       </p>
 
       <h2 className={h2}>11. Droit applicable</h2>
