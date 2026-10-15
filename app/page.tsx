@@ -1,4 +1,4 @@
-const LIEN_PAIEMENT = "https://buy.stripe.com/test_4gMcMYgT48k7bwqbKc3ks00";
+const LIEN_PAIEMENT = "https://buy.stripe.com/4gMeV7a2h9ycdCf5i31Jm00";
 const titre = "font-[family-name:var(--font-fraunces)]";
 
 function Bouton({ children }: { children: React.ReactNode }) {
@@ -12,10 +12,24 @@ function Bouton({ children }: { children: React.ReactNode }) {
   );
 }
 
+function Mention() {
+  return (
+    <p className="mt-2 text-center text-xs leading-snug opacity-70 md:text-left">
+      En payant, tu demandes l’exécution immédiate du service et tu reconnais
+      perdre ton droit de rétractation une fois le service pleinement exécuté.
+      Voir les{" "}
+      <a href="/cgv" className="underline">
+        CGV
+      </a>
+      .
+    </p>
+  );
+}
+
 export default function Home() {
   return (
     <>
-      <main className="mx-auto max-w-xl px-5 pb-28 pt-10 md:pb-16 md:pt-16">
+      <main className="mx-auto max-w-xl px-5 pb-36 pt-10 md:pb-16 md:pt-16">
         <p className="text-sm font-bold uppercase tracking-widest text-[#E4572E]">
           Agios
         </p>
@@ -31,6 +45,7 @@ export default function Home() {
           <p className="mt-2 text-center text-sm opacity-70 md:text-left">
             Paiement unique. Pas d’abonnement.
           </p>
+          <Mention />
         </div>
 
         <section className="mt-12">
@@ -100,11 +115,12 @@ export default function Home() {
           <p className="mt-1 opacity-70">une seule fois</p>
           <div className="mt-5">
             <Bouton>Payer 19 €</Bouton>
+            <Mention />
           </div>
         </section>
       </main>
 
-      <footer className="mx-auto max-w-xl px-5 pb-28 text-sm opacity-70 md:pb-10">
+      <footer className="mx-auto max-w-xl px-5 pb-36 text-sm opacity-70 md:pb-10">
         <nav className="flex flex-wrap gap-x-5 gap-y-2">
           <a href="/mentions-legales" className="underline">Mentions légales</a>
           <a href="/cgv" className="underline">CGV</a>
@@ -115,6 +131,9 @@ export default function Home() {
 
       <div className="fixed inset-x-0 bottom-0 border-t border-[#12372A]/20 bg-[#F6F1E7]/95 p-3 md:hidden">
         <Bouton>Récupérer mes frais — 19 €</Bouton>
+        <p className="mt-1 text-center text-[11px] leading-tight opacity-70">
+          Exécution immédiate : pas de rétractation une fois le service réalisé.
+        </p>
       </div>
     </>
   );
